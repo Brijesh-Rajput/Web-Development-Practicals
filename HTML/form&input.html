@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    hello  <!--Not a good way to write like this. Put this in a tag-->
+    <h2>Enter your Details</h2>
+    <form action="" method="">
+
+        Your Name Here:- <input type="text"> <!--By default, its size is of 30 characters.-->
+        <p>Your Name Here:- </p><input type="text"> <!--paragraph is block element not an inline element. Whereas, input element is an inline element and as well as empty tag. ==> U can verify this by inspecting it -->
+        <br><br>    
+
+        <label for="">First Name: </label><input type="text">    
+        <label for="">Second Name: </label><input type="text">
+        <br><br> <!--Don't use br tag to move to the next line. Use CSS for that, like flexbox,div tags-->
+        <!-- By default type of input tag is text. E.g.:=> <input> -->
+
+        <label for="">Age: </label><input type="number"> <!--How to give restrict or range of numbers ???-->
+        <br><br>                                    <!--How to restrict date of birt in a range. Like only adults or children below 10yrs can fill the form.-->
+        <label for="">Date_of_Birth: </label><input type="date"> <!--NOt good as we are fetching both DOB and Age-->
+        <br><br>
+        <label for="">Email: </label><input type="email">
+        <br><br>
+        <label for="">Password: </label><input type="password">
+        <!--NOTE:- you can see the password whatever person has typed, first type the passwrod and then go to inspect and change the type of input from passord to text.-->
+        <br><br>
+
+        <p>Enter your T-shirt size</p>
+        <input type="radio" name="tshirtsize"><label for="">small: </label><br>
+        <input type="radio" name="tshirtsize"><label for="">medium: </label><br>
+        <input type="radio" name="tshirtsize"><label for="">Large: </label>
+        <!--as we are clicking on the label of thiis radio type input, like small,medium,large we are not able to select the it. We can achieve this using label tag-->
+        <br><br>
+        <!--Every element must be has unique id value in whole html file-->
+        <p>Enter your T-shirt size with using for attribute of label. Now u can click on text it will automatically select it </p>
+        <input id="small" type="radio" name="tshirt_size"><label for="small">small: </label><br>
+        <input id="medium" type="radio" name="tshirt_size"><label for="medium">medium: </label><br>
+        <input id="large" type="radio" name="tshirt_size"><label for="large">Large: </label>
+        <br><br>
+        <p>Now click on email text, You will see that input box will highlight automatically. That's the power of label</p>
+        <label for="email">Email: </label><input id="email" type="email">
+        <br><br>
+        <p>Value of R,G,B is from 0 to 255(2<sup>8</sup>)</p>
+        <label for="color">Your favourite colour</label><input id="color" type="color"> <!--How it's value will goes to backend ???????-->
+        <br><br>
+        <p>Folowwing :- Both are reset button</p>
+        <input type="reset">
+        <input type="reset" value="clear">
+
+        <br> <br>
+        <!--After clicking submit button.
+            1. firstly valuidation will happen of whatever input you have given 
+            2. then action will perform whatever we have written in action attribute of form.
+            3. if we have given something in cation attribute then data will pass to that file/or path. And we can do anything with that data.-->
+
+        <p>Now , if u submit the form after filling all the details the u will see the change in url. and u can see that tshirtsize=on & tshirt_size=on
+            Which is nothing its a name attribut of radio input tag and on is the value of name attribute which is bydefault b'coz we haven't gave any value of radio input tag each selection value.
+            <br> Another thing is that, value of only radio input goes and u can see in url. No ther than is there.
+            <br> 
+            information is goes to backend through url. that's why we will fetch the information from url using js to do work on data.
+            <br>
+            That's why name attribute is very important for backend and it will help when we have to do submit or retrieve data. We will learn in js that How to retrieve data.
+            <br>
+            Id is also useful in label as we have already seen. It must be unique in html and id is given to a html tag.
+        </p>
+
+        <p>Enter your T-shirt size with using for attribute of label. Now, we have given the value.</p>
+        <input id="small" type="radio" name="tshirtsize_withvalue" value="small"><label for="small">small: </label><br>
+        <input id="medium" type="radio" name="tshirtsize_withvalue" value="medium"><label for="medium">medium: </label><br>
+        <input id="large" type="radio" name="tshirtsize_withvalue" value="large"><label for="large">Large: </label>
+
+        <p>Benefit of name attribute:- 
+            1. all radio input tag of similar kind will come in same group if we give same name
+            2. we can get name and its value in backend and can identify it.
+        </p>
+
+        <p>We can also give value to the text type input tag. when no value is passed then this value which had already assigned will be bydefault value. Below is the Example:- submit the form without filling below input box</p>
+        <label for="frstname">First NAme:- </label><input id="frstname" type="text" name="firstname" value="Nameless_Person">
+        <label for="fname">first name:- </label><input id="fname" type="text" placeholder="NoName" name="fname">
+        <p>Now, you can see the difference between placeholder and bydefault value. Placeholder attribute gives suggestion that what to write and how to write acc. to me but if we will not give nay value then its value will be consider as empty </p>
+   
+        <p>Below is the example of combination of both, default value and placeholder. When we clear the default name then placeholder value will display.</p>
+        <label for="lname">Last name;- </label> <input id="lname" type="text" name="lname" value="Last name" placeholder="Surname">
+        <br><br>
+        <p>Required input tag, Below is the example:-</p> <!--But how to give red astrisk symbol which tells user directly that its required input field ???????????-->
+        <label for="nothinf">demo</label><input id="nothinf" type="text" required>
+        <br><br>
+        <p>for attribute helps us to bind label and input tag and id must be same in both tag for binding</p>
+
+
+        <!--Select and option-->
+        <!--helpful for drop-down list-->
+        <label for="cars">Choose a car</label>
+        <select name="car" id="cars"> <!--id is used for binding with label with for attribute.  Whereas, name is used to retrieve data in backend thats why value is also given. -->
+            <option value="select">select car</option>
+            <option value="volvo">Volvo</option>
+            <option >Nope</option> <!--I think if value is not given then also it works. you can cnf it by seeing url after submitting form. or cnf it in backend -->
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <!--U can use jquery to fetch the data acc. to user selection on data -->
+        </select>
+
+
+        <!--textarea-->
+        <!--textarea is used when we have to take lots of data from user, ig more than 30 characters b'coz text type takes 30 characters -->
+        <label for="aboutyourself">Tell us about yourself</label>
+        <textarea name="aboutyourself" id="aboutyourself" cols="2" rows="1"></textarea> <!--bydefault value:- cols="30" rows="10" ==>It only tells the How the input textbox will see initially(in which size),we can change it later i.e. textarea box will take 30 columns and 10 rows. -->
+        
+        <p>Note:- i have observed that whenever we give/fill anything with words and if we have gicven space between the wiords then data will goes through the url and you will see that wherever we have given the space between words there, u will see the '+' symbols.</p>
+
+        <input type="submit">
+
+        <!--Input type:-
+            1. button
+            2. checkbox
+            3. color
+            4. date
+            5. datetime-local
+            6. email
+            7. file
+            8. hidden
+            9. image
+            10. month
+            11. number
+            12. password
+            13. radio
+            14. range  
+            15. reset
+            16. search
+            17. submit 
+            18. tel
+            19. text
+            20. time
+            21. url 
+            22. week
+        -->
+
+    </form>
+</body>
+</html>

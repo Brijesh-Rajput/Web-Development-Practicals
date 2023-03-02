@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics Tag</title>
+</head>
+<body>
+
+    <!-- Hexadecimal code
+    (Total max.m bits = 6*4bits=24bits )
+    #000000 ==> Black colour 
+    #ffffff ==> Whitecolour -->
+
+    <!-- section vs div vs article ????????????????? -->
+
+    <!-- in html page, Every element have only atmost one unique id  -->
+    
+    <!-- p, h1 to h6 , em,strong => semantic tags 
+    whereas, b,i ==> not a semantic tags
+     -->
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#internships"></a>Internships</li> 
+                <li><a href="#projects"></a>Projects</li>
+                <li><a href="#contactme"></a>Contact me </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Nav can be after header tag also. 
+    <nav>
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#internships"></a>Internships</li> 
+            <li><a href="#projects"></a>Projects</li>
+            <li><a href="#contactme"></a>Contact me </li>
+        </ul>
+    </nav> -->
+
+    <main> <!--There should not be more than one main in an html page  -->
+        <section id="education">
+            <article>
+
+            </article>
+            <article>
+
+            </article>
+        </section>
+        <section id="Internships">
+
+        </section>
+    </main>
+    <!--Main ends-->
+
+    <aside> <!--Here, we need CSS -->
+          
+    </aside>
+
+    <footer>
+
+        <a href="#">Back to Top</a> <!--By default # => goes to the top. No need to write any id references-->
+        <!-- By me:- <a href="#education">Top</a>  -->
+    </footer>
+    
+</body>
+</html>

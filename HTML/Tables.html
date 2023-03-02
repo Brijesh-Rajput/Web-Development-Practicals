@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <table style="border:solid">
+    <tr>
+        <th>Hello</th>
+        <th>Hello</th>
+        <th>Hello</th>
+    </tr>
+    <tr>
+        <td>Hello</td>
+        <td>Hello</td>
+        <td>Hello</td>
+    </tr>
+    <tr>
+        <td>Hello</td>
+        <td>Hello</td>
+        <td>Hello</td>
+    </tr>
+    </table>
+
+    <br><br> <!--Go and refer mdn tables and styling tables -->
+
+    <!--By ME-->
+    <table border="2" style="padding: 3px; border-radius: 12px; ">
+        <tr><!--Table row-->
+            <th>Sr.no</th> <!--Table heading-->
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td><!--Table data-->
+            <td>RAhul</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mahesh</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td colspan="3">Total</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <!--Caption,colgroup,col tag, colspan,rowspan attribute-->
+
+    <table border="">
+        <caption>My marksheet</caption>  <!--Title of the table -->
+        <colgroup> <!--To give styling to a group of colummn or a particular column elments -->
+            <col style="background-color: aqua;"> <!--Empty tag  ==> By default it consider as only 1 column-->
+            <col span="2" style="background-color: antiquewhite;"> <!--Span helps to decide that on how much column we have to give this style -->
+        </colgroup>
+
+        <!--Thats a Power of thead, we can give style to all the headers of table-->
+        <thead style="background-color: yellow;"><!--Table head-->  <!--No need of all this thead,tbody,tfoot-->
+            <tr>
+                <th>Subjects</th>
+                <th>Marks</th>
+                <th>Passes</th>    
+            </tr>
+        </thead>
+        <tbody> <!--TAble Body-->
+            <tr>
+                <td>Mathematics</td>
+                <td>56</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>23</td>
+                <td>Fail</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Hello</td>
+                <td>56</td>
+                <td>Fail</td>
+            </tr>
+            <tr>
+                <td>48</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td colspan="2">Nothing</td>  <!---Make table something like that where we are using both colspan and rowspan both -->
+            </tr>
+        </tbody>
+        <tfoot style="background-color: lightgreen;"><!--Table footer-->
+            <tr>
+            <th>Passed</th>
+            <th>YEs</th>
+            </tr>
+            <tr>
+                <th colspan="2">Passed</th>
+                <th>NO</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
