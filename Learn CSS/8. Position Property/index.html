@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property in CSS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- shortcut :- .container>.box*3   -->
+    <div class="container">
+
+        <div class="box red">Fixed
+            <div class="box yellow" id="absolute_1">Absolute</div>
+        </div>
+        <hr>
+        <!--this is for seeing that when any box left there space then How other elements occupies its space(in case of fixed,absolute.)-->
+
+        <div class="box green">Relative
+            <div class="box yellow" id="absolute_2">Absolute</div>
+        </div>
+        <hr>
+
+        <div class="box yellow" id="absolute_3">Absolute</div>
+        <hr>
+
+        <div class="box violet">Sticky</div>
+    </div>
+
+
+    <p style="z-index: 10; ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit laudantium aliquid
+        aspernatur vero, non ea!</p>
+    <span style="background-color: aquamarine;">Hello How text align center works ? can wwe do center the div or block
+        container if yes then ig it will work as inline-relative position property.</span>
+    <ul>
+        <li>Static:- <br>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Fixed:- <br>
+            <ul>
+                <li>Positions are <span style="background-color:lightpink">fixed even page scrolled.</span></li>
+                <li>Positions values like top,bottom,left,right decided ... <mark>Relative to the Browser screen.</mark>
+                </li>
+                <li>There <mark>originally positions are removed</mark> from the html and it will <mark>cover by next
+                        element.It will float after u set fixed.</mark></li>
+                <li><strike>But, if u set fixed position and doesn't give any top,bottom,left,right property then it
+                        will not seen.</strike> </li>
+                <li>Top,right,bottom,left works</li>
+                <li><span style="background-color: greenyellow;">Why red box comes over all the element when i srcoll it
+                        ?????</span></li>
+            </ul>
+        </li> </span>
+        <li>Relative:- <br>
+            <ul>
+                <li>Positions of top,left,bottom,right <span style="background-color:lightpink">vary from there original
+                        positions</span> in html</li>
+                <li>Positions values like top,bottom,left,right decided ... <mark>Position is Relative to it's Normal
+                        position.</mark> </li>
+                <li>There <mark>originall positions will not be cover</mark> by any other elements. it will be as it is.
+                </li>
+                <li>Top,right,bottom,left works</li>
+                <li><span style="background-color: greenyellow">Overlapp happens b'coz z-index value are same(which is
+                        0) but why green comes over text ??</span></li>
+            </ul>
+        </li>
+        <li>Absolute:- <br>
+            <ul>
+                <li>Positioned <span style="background-color:lightpink;">relative to nearest positioned(position value
+                        other than static) ancestor.</span></li>
+                <li>If <span style="background-color:lightpink">no positioned ancestors, it uses document body</span>,
+                    moves along with scrolling.That means, position will relative to body(including padding) </li>
+                <li>There <mark>Originall space will be covered</mark> by <mark>other element</mark> whether u will set
+                    position value or not of abolute. As happen in fixed case. <mark>It will float if it's an absolute
+                        container.</mark></li>
+                <li>Top,right,bottom,left works</li>
+            </ul>
+        </li>
+        <li>Sticky:- <br>
+            <ul>
+                <li> <span style="background-color: greenyellow;"> is Sticky position only for top ??????   How can we use bottom,left,right for sticky position ??? But How left ,right works and works in wich relative? </span><br>
+                    <span style="background-color: mediumspringgreen;"> we can use left also,i have apply this concept in Project1.html which is in this folder.  </span></li>
+                <li></li>
+                <li>More details:- go to stickyPosition.html</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr id="hr_design">
+
+    <ul>
+        <li>Z-index :- </li>
+        <ul>
+            <li>Z-index specifies stack order of element.</li>
+            <li>greater stack order always in front of element with lower stack element</li>
+            <li>if two elements <span style="background-color:lightpink">overlap without z-index specified(means
+                    z-index=0 for both)</span>, <span style="background-color:yellow">element positioned last in html
+                    will shown on top.</span></li>
+            <li>@me:- <mark>Higher z-index shown on top</mark>.</li>
+            <li><span style="background-color: greenyellow;">why p and span tags are covered by relative and absolute
+                    box even though they are written after the relative,absolute box in html ???. I can understand about
+                    why absolute coveres relative. But what about my question??If i will give z-indexed value to the p
+                    and span tags then also no difference seen why ???</span></li>
+            <li>By default, children shown on the top of parent. E.g:- box shown on the top of container as there z-index values are same.</li>
+        </ul>
+    </ul>
+    <p>By-default value of z-index is 0 for all.</p>
+
+    <p style="background-color: greenyellow;">Why absolute box comes slighty down over the red fixed box. ?? <br>
+        <span style="background-color: mediumspringgreen;">B'coz:- in red div container, we have written fixed first and
+            then again another div of the same size as was red. so, due to less space(not able to fit inside red box) It
+            overflows.</span>
+    </p>
+    <div class="container">
+        <div class="box b1">Box 1</div>
+        <div class="box b2">Box 2</div> <!--style="position: absolute"-->
+        <div class="box b3">Box 3</div>
+        <!-- <div class="box"></div> -->
+    </div>
+</body>
+
+</html>

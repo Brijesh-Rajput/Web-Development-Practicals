@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+    background-color: teal;
+    /* height: 100vh; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* for up-down animation,and other things*/
+    flex-direction: column;
+    gap: 200px;
+}
+
+.container1{
+    width:300px;
+    height:300px;
+    border:2px solid white;
+}
+.box1{
+    width:100px;
+    height:100px;
+    background-color: white;
+    transition: 1s ease;
+}
+.box1:hover{
+    cursor: pointer;
+    background-color: chartreuse;
+    transform: translate(200px);
+}
+/* What if we want to do animation without hovering action ?  */
+/* What if i want that after some time this inner box will go right,then down,then left,then up and complete full circle. */
+/* With the help of transition we can define only two state called from and to.(Kaha se nikalna hai aur kaha tak jaana hai) */
+/* But, with key frames we can define as many as states we want. Below is the example. */
+
+.container2{
+    width:300px;
+    height:300px;
+    border:2px solid white;
+}
+
+.box2{
+    width:100px;
+    height:100px;
+    background-color: white;
+    
+    animation-name: circles1;
+
+    animation-duration: 1s;/* If 0s animation not work, as value increases animation will become more slower. */
+    animation-delay: 1s; /* animation will start after 1s(i.e. delay of 1s) */
+    animation-iteration-count: infinite; /* No. of times animation should work. */
+
+    animation-direction: reverse; /* bydefault value is normal. */
+    animation-timing-function: ease-in; /* same as was in transition. */
+    /* animation-fill-mode: ; */
+
+    /* shorthand property */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* Animation will be fast if no. of iteration is more and duration is also less. ig:- logic */
+}
+@keyframes circles1 {
+    /* In this Key-frames we can define that, at which time what we have to do.
+    Means, given animation-duration main kis time% pe hame kya krna.*/
+
+    /* NOT neccessary to define all % upto 100%. Define as u want */
+
+    0%, 100%{  /* 0% and 100% animation are same. */
+        /* We will do at 0% of given time-duration of animation. */
+        transform: translate(0,0); /* x-axis and y-axis translate value. */
+    }
+    /* 2% */
+    25%{
+        transform: translate(200px,0);
+    }
+    50%{
+        transform: translate(200px,200px);  /* transform: translate(0px,200px); */
+    }
+    /* NOTE:-Order doesn't matters */
+    75%{
+        transform: translate(0,200px); /* transform: translate(200px,200px);  Try this correspondingly uncommenting above line. */
+    }
+
+    /* 100%{
+        /* As it's value is same as 0%. so we can use DRY(Do not repeat yourself) *
+        transform: translate(0,0);   
+    } */
+
+}
+
+
+
+.container3{
+    width:300px;
+    height:300px;
+    border:2px solid white;
+}
+
+.box3{
+    width:100px;
+    height:100px;
+    background-color: white;
+    
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-direction: normal; 
+    animation-timing-function: linear; 
+    animation-fill-mode: forwards; /* default value is none.(starts from 0% and end at 100% key-frame and animiated content will go there original place.) */
+    /* In forwards, at 100% key-frame our animation will stop. ==> by bhaiya */
+    /* In backwards, animation will stop at 0% key frame. */
+}
+
+@keyframes slide-in {
+    0%{
+        transform: translate(-400px);
+    }
+    100%{
+        transform: translate(200px);
+    }
+    /* If we are defining two states as here we have done then we can write from and to instead of 0% and 100% correspondingly. */
+}
+
+/* ==================================================================== */
+
+.container{
+    width:300px;
+    height:300px;
+    border:2px solid white;
+
+    /* animation: orbit 4s infinte; This is wrong, acc. to practical value should be in sequence. But don't know why in video it executes without specifing some of value. */
+    animation: orbit 4s linear 0.1s infinite normal;
+    /* animation-name: orbit;
+    animation-duration: infinte; */
+
+    /* short-hand property */
+    /* animation: name duration timing-function delay iteration-count direction-fill-mode; */
+    border-radius: 50%;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background-color: white;
+    /* animation-name: orbit; */
+    animation-duration: 1s;
+    /* animation-delay: 2s; */
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    /* animation-fill-mode: both; */
+    border-radius: 50%;
+}
+
+@keyframes orbit {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* ================================= */
+/* Google assistant loader example:- */
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    animation: up-down 0.5s ease 0.1s infinite alternate; /* don't define animation-fill-mode value other than alternate. */
+    /* animation: name duration timing-function delay iteration-count direction-fill-mode; */
+
+    /* animation: up-down 0.8s ease infinte alternate;  Invalid Property value. BUT why?????????? ===> ig, sequence matter.*/
+}
+
+@keyframes up-down {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+.dot:nth-child(2){
+    animation-delay: 0.1s;
+    /* We are able to apply animation here b'coz nth-child is also a container on which we are applying animation. */
+    /* ig:- if i am using list instead of div then also it will work same b'coz there also we are using class. */
+}
+.dot:nth-child(3){
+    animation-delay: 0.2s;
+}
+.dot:nth-child(4){
+    animation-delay: 0.3s;
+}
+
+

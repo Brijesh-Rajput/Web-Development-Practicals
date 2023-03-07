@@ -1,0 +1,83 @@
+.container{
+    width: 400px;
+    height: 400px;
+    background-color: steelblue;
+    margin: 80px auto; /* from top,bottom margin is 80px and from left,right margin is auto means it will be on center acc. to screen-width.*/
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    font-size: 4rem;
+
+    display: flex;
+
+    /* To center the text "Box" written in this div container */
+    justify-content: center;
+    align-items: center;
+
+    /* transform:- */
+    transform: scale(0.5);  /* bydefault value is 1*/
+    /* width of container will become half of the container. */
+    /* scale => size of box will increase/decrease in both x and y direction. */
+
+    transform: scaleX(2); /* box will increase only in x direction. */
+    /* 2 means width of box container will become twice. */
+
+    transform: scaleX(2) scaleY(1.5) scaleZ(3);
+    /* scaleZ()  will increase/decrease size in z-direction */
+
+    transform: (2,1.2); /* or transform: scaleX(2) scaleY(1.2); */ 
+
+    transform: skew(20deg,30deg); /*20deg will skew in X-direction and 30deg will skew in Y-=direction */
+    /* we can skew in a particular direction. */
+
+    transform: skew(0deg, 30deg); /*skew only in Y-dircetion. */
+
+    /* translate behave like display:relative property */
+    transform: translate(20px,40px);
+    transform: translate(50%, 50%); /* 50% is the 50% of box. which is 100px */
+
+    transform: rotate(20deg); /* this is bydefault rotateZ() */
+    /* we can rotate any div with this help. */
+
+    /* transform: rotateX('angle'), rotateY('angle'); Understand this  */
+
+    transform: rotate(45deg) scale(1.2) skew(30deg) translate(45px);
+
+    transform: rotate(45deg); /* origin is center of box (as rotation happens in Z-direction) */
+    /* Now, we want to change the position of origin so that it will rotate from that origin. We want to change to top-left corner of box. */
+
+    transform-origin: top left; /* values are :- top */
+    /* origin tells from where we have to scale,skew,translate,rotate. */
+
+    transform-origin: 50% 50%; /* this is center origin, ig */
+    /* first value is relative to width and 2nd value is relative to height */
+
+    transform-origin: 0% 0%; /* for top left origin */
+
+    transform-origin: 10% 0%;
+
+    transform-origin: 100px 200px;
+    /* 100px in X-direction and 200px in Y-direction. */
+
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    font-size: 4rem;
+
+    display: flex;
+
+    /* To center the text "Box" written in this div container */
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5 ease;
+    transform-origin: 100px 200px;
+}
+.box1:hover{
+    transform: rotate(45deg);
+}

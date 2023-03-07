@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing:content-box; ===>> by me try */ 
+    box-sizing: border-box;
+     /* Do sizing of all content which are present acc. to border-box */
+}
+.box{
+    border:20px solid red;
+    padding: 30px;   /* Padding will be given from all 4 side. */
+
+    /* padding: 40px 30px 20px 10px;*/ /* customize padding value. values are clockwise. 1st value is for Top, then for right, bottom , left*/
+    /* Don't give ' between the value. */
+
+    /*padding: 40px 30px;*/ /* If two values are given i.e.:- top,bottom value=40px  and left,right value=30px */
+
+    /*padding: 40px 30px 10px;*/ /*If 3 values are given then, 1st value for top, 2nd value for left,right, and 3rd value for bottom.*/
+
+    /* If more than one time same property will written then cascading/order matters. Last defined property will apply */
+
+    /* Same syntax for margin like as we have done in padding */
+    margin:40px; /* If not written then also u will see bydefault margin of body element which is given by user agent called browser.
+                    We can do it zero.
+                    E.g:- 
+                    body{
+                        margin:0; /* Here, we are doing overriding of property. /
+                    } */
+        /* Similarly, by-default some margin is given to all element. 
+           We can change it by using universal Selectors.
+           E.g:-
+           *{
+                margin:0;
+            }*/
+
+    /* Size is 200 x 200 */
+    width:200px;
+    height:200px;
+    /* But actually, 200 x 200 ka sirf content hai. margin and border both are coming in our content. Margin is not coming in our content.
+        Therefore, Our box size is 20+30+200+30+20 == 300 x 300 
+        You can see by hover using inspect*/
+     
+}
+.box1{
+    border:20px solid darkmagenta;
+    padding:30px; /* padding is used to do separation of content from the borders*/
+    /* margin:0; */ /* Margin is used to do separation between two separate-elements */
+ 
+    /* Size is 200 x 200 */
+    width:200px;
+    height:200px;
+    /* To see this comment the box-sizing written in universal selector*/
+    /* But actually, 200 x 200 ka sirf content hai. margin and border both are coming in our content. Margin is not coming in our content.
+        Therefore, Our box size is 20+30+200+30+20 == 300 x 300 
+        You can see by hover using inspect*/
+    /* If we want that box size should be same as we have define height & width then we will use box-sizing property*/
+
+}

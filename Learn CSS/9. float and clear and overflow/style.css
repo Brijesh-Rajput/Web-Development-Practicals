@@ -1,0 +1,41 @@
+.container{
+    border: 2px solid red;
+    /* width:400px; */
+    height:400px; 
+    /* Now u can see that paragraph is overflowing. */
+
+    overflow: auto; /* By-default value:- visible*/
+}
+
+.container1{
+    border:2px solid green;
+
+}
+
+.p1{
+    border: 2px solid darkorchid;
+    margin-left: 100px;
+    /* if we want space between image and paragraph then 👇 */
+    /* If i want margin then i have to give margin for that image which is top on this paragraph. in this e.g:- img1 */
+}
+.p2{
+    border: 2px solid darkorange;
+}
+
+.img1{
+    float:left; 
+    margin-right:20px;  /* imp effect notice */
+    /* u can see the space-difference between 1st image and 1st paragraphs v/s  space-difference between 2nd image and 2nd paragraphs. */
+}
+.img2{
+    float:right;
+}
+
+.block1{
+    border:3px solid darkturquoise;
+    overflow: auto;    
+}
+
+.p2clear{
+    clear:left; 
+}

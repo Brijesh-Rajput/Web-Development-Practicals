@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property in Css</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="navul">
+            <li class="navlist">Home</li>
+            <li class="navlist">Product</li>
+            <li class="navlist">Pricing</li>
+        </ul>
+        <!-- as u can see that we arre not able to see the bullets points of li b'coz we have done padding:0;  -->
+    </nav>
+
+    <h1><span style="background-color:aquamarine">Let's </span><span style="background-color:chartreuse">Get </span><span style="background-color:lightsalmon">Started</span></h1>
+    <!-- jis chij me ham span ko rakhenge uski property adopt kar lega span -->
+
+    <h2>Drawbacks of inline Elements :- </h2>
+    <ul>
+        <li>can't define <mark>Width</mark></li>
+        <li>can't define <mark>height</mark></li>
+        <li>height and width is decided on the basis of content</li>
+        <li>You can try this:- <br>
+            <ul>
+                <li>Take achor tag in this.(e.g:- done in this page)</li>
+                <li>And define width of a tag using css</li>
+                <li> a{ width:40px; } </li>
+                <li>can define margin but margin for top and bottom we can't define.</li>
+                <li>But u will notice that, in img tag we can define height and width. This changes effects.  <br>
+                    But How ?? you said earlier that we can't define height/width to an inline elements. <br>
+                    This happens b'coz img is not inline element, it's a inline-block element. <br>
+                    <mark>img is an inline-block elements NOT an inline elements</mark>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Lorem, ipsum dolor.</p>
+    <p>Neque, dolor eligendi?</p>
+    <p>Sapiente, laborum. Ratione?</p>
+    <span>Lorem, ipsum dolor.</span>
+    <span>Deleniti, impedit ex?</span>
+    <span>Repellat, explicabo animi?</span>
+    <img src="../images/Vikas_Photo2m.JPG" alt="random_image">
+    <a href="#">Click me</a>
+    <a href="#">Clic me</a>
+    <span id="span_width">
+        Lorem, ipsum dolor.
+    </span>
+    <p>I think that inline-block elements behaves like inline but it can change width and height value. ub can see this above span tag. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, dicta. Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</p>
+    <a href="#">Click me</a>
+    <a href="#">Click me</a>
+    <a class="topmargin" href="#">Click me</a>
+</body>
+</html>

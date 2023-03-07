@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    /* padding:0; */  /* I did this to do the same task which can be done by doing uncommenting this. I did that in ul tag css */ 
+    box-sizing:border-box;
+    /* border:1px solid red; */  /* uncommenting this for better look of website. We can install chrome extension called pesticides with/without hover for doing same thing which i have done by writing this css line. */
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    display: block; /* By-default */
+    color: red;
+    width:50%;
+    /* Now, u can see the box size taken by both p and span tag as screen size increases/decreases. */
+}
+
+a{
+    display: inline;
+    width:40px;  /* will not change as anchor tag is an inline tag. */
+
+    margin:40px; /* that means, margin will be given from all four directions. But u will notice that, margin from left & right will be given.
+                    margin from top and bottom will not be given as it's a inline element */
+                    /* B'coz inline element work on content flow and content flows from left to right. so, margin from left,right works. and Not works for top and bottom. */
+    /* if want margin from top,bottom then make it block or inline-block element. Below E.g:-  */
+}
+a.topmargin{
+    display:inline-block;
+}
+
+#span_width{
+    background-color: cyan;
+    display:inline-block; /* default value is inline */
+    width:80px; /* will not change as span tag is an inline tag. */
+}
+
+img{
+    width:160px;
+    height: 120px;
+    /* display: none;  this will remove from the html */
+    display:inline-block; /* by-default */ 
+    /* But how can i guarantee that its a inline-block element ?????? as i can't see by doing inspect. */
+
+    /* inline-block can define width and as well as height. Let's try with span and anchor tag. */
+}
+
+
+/* by me */
+/* li.navlist{
+    display: inline-block;
+    width:33%;
+} */
+
+ul.navul{
+    padding:30px;
+    list-style:none;
+    background-color: black;
+    color: white;
+    text-align: end;
+}
+li.navlist{
+    padding:10px;
+    display:inline;
+}
+
+ul{
+    /* list-style: disc; */
+   padding-inline-start: 40px; /* that means, padding will be given from only start(left) NOT from all the directions. and it is relative to the parent b'cpz i have used px */
+}
+
+li.navlist:hover{ /* pseudoclass is used. */
+    color: chartreuse;
+    cursor: pointer; /* will behave like in link. hand-fingers will shown when hovering. */
+}

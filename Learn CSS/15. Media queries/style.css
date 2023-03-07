@@ -1,0 +1,118 @@
+body{
+    background-color: red;
+}
+/* ============================================================================================================= */
+
+/* We want to change the background color as screen width decreases */
+/* similar thing we have already done with images using srcset attributes. responsive images */
+
+/*
+@media (max-width: 400px){ /* width <= 400px *
+    body{
+        background-color: green;
+    }
+}
+@media (max-width: 400px) { /* width <= 200px *
+    body{
+        background-color: gold;
+    }
+}
+*/
+/* If we want to write max-width then we must have to write in decreasing order from top to bottom. */
+
+/* Note:- the output of both above and below code. Order matters */
+
+/* This is wrong !!!!!!!!!!
+@media (max-width: 400px) { /* width <= 200px *
+    body{
+        background-color: gold;
+    }
+}
+@media (max-width: 400px){ /* width <= 400px * 
+    body{
+        background-color: green;
+    }
+}
+*/
+
+/* ======================================================================================================================== */
+
+/*
+@media (min-width: 600px) {
+    body{
+        background-color: gold;
+    }
+}
+@media (min-width: 400px) {
+    body{
+        background-color: green;
+    }
+}
+*/
+/* Note:- difference of code of below and above media-queries code */
+/*
+@media (min-width: 200px) {
+    body{
+        background-color: green;
+    }
+}
+@media (min-width: 600px) {
+    body{
+        background-color: gold;
+    }
+}
+*/
+/* When we're writing min-width then we have to write min-width value in increasing order. */
+
+
+/* =============================================================================================================== */
+
+/*
+@media (orientation:portrait){ /* It happen's when screen height > screen width  ==> This is called portrait mode*/
+    /* landscape mode:- screen_height < screen width *
+    body{
+        background-color: green;
+    }
+}
+*/
+
+/* =============================================================================================================== */
+
+/* 
+@media (min-width:400px) and (max-width:600px) {
+    body{
+        background-color: green;
+    }
+}
+*/
+/* read min-width as starting-from
+    AND 
+   read max-width as upto
+*/
+/* OR  */
+@media (400px <= width <=600px) {
+    body{
+        background-color: green;
+    }
+}
+
+
+/* NOW we will apply media-Queries in real world e.g:- folder no. 14 grid portfolio. */
+/* for which width(breakpoints) we have to write media-Queries ? 
+    Go to tailwind css website => https://tailwindcss.com/docs/screens
+
+    'sm': '640px', ==> for small
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px', ==> for medium
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px', ==> for large
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px', ==> for extra large
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px', ==> for extra 2-x large
+      // => @media (min-width: 1536px) { ... }
+*/

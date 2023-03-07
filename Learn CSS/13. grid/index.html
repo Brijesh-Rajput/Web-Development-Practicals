@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Property</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Display:grid;</h1>
+    <ul>
+        <li>Parent (grid container) (display:grid) :- <br>
+            <ul>Properties:-
+                <li>gap:-
+                    <ul>
+                        <li>row-gap,column-gap </li>
+                    </ul>
+                </li>
+                <li>grid-template-columns:-
+                    <ul>
+                        <li>To make different-different columns.</li>
+                        <li>grid-template-columns:200px 300px 100px; ==> mans we will have 3 columns where 1st column width is 200, then 300 then 100 </li>
+                        <li>we can define width of block by using grid-template-columns</li>
+                    </ul>
+                </li>
+                <li>grid-template-rows:- 
+                    <ul>
+                        <li>we can define height of block by using grid-template-rows</li>
+                    </ul>
+                </li>
+                <li>justify-content:-
+                    <ul>
+                        <li>x-axis ke through ham position kar sakte hain</li>
+                        <li>center,end,space-around,space-between,space-evenly</li>
+                    </ul> 
+                </li>
+                <li>align-content:- 
+                    <ul>
+                        <li>Different from align-items.</li>
+                        <li>center,stretch(bydefault => equally height will divided),start,end,space-evenly,space-between,space-around</li>
+                    </ul>
+                </li>
+                <li>align-items</li>
+            </ul>
+        </li>
+        <li>Children:- 
+            <ul>Properties:-
+                <li>justify-self:- 
+                    <ul>
+                        <li>center,stretch(bydefault),start</li>
+                    </ul> 
+                </li>
+                <li>align-self</li>
+                <li>grid-column:- 
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>grid-row</li>
+                <li>grid-area</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <hr>
+
+    <!-- .container>.box#box-${box-$}*10 -->
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+        <div class="box" id="box-9">box-9</div>
+        <div class="box" id="box-10">box-10</div>
+    </div> 
+
+    <br> <hr>
+
+    <div class="container1">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+        <div class="box" id="box-9">box-9</div>
+        <div class="box" id="box-10">box-10</div>
+    </div> 
+
+    <br> <hr>
+
+    <div class="container2">
+        <div class="box" id="box1-1">box-1</div>
+        <div class="box" id="box1-2">box-2</div>
+        <div class="box" id="box1-3">box-3</div>
+        <div class="box" id="box1-4">box-4</div>
+    </div> 
+
+    <div style="height:400px">
+
+    </div>
+</body>
+</html>

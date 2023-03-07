@@ -1,0 +1,119 @@
+/* 
+html{
+    font-size:1em; /* Default value /
+} 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* This font family selected url we have to write in css file or in css style. This if for font family:- font-family: 'Pacifico', cursive; */
+/* When css will load then this font will download first using this above link acc. to code shuttle bhaiya. */
+
+h1{
+    color: blue;
+    background-color: lightgrey;
+    text-align: center;
+    /* text-align: inherit;   text-align property of parent will be adopt by this h1 tag. */
+    /* text-align: justify; ???????? */
+
+    text-decoration: underline;
+    text-decoration-color: darkred;
+    text-decoration-style: wavy;
+
+    text-transform: capitalize; /* 1st letter of all the words will capatilize. */  
+    
+    text-decoration-thickness: from-font;
+}
+p.p1{
+    font-size:1.5rem;
+    text-align: right;
+}
+a{
+    text-decoration: underline;  /* By-default value is given to link. */
+    /* cursor: pointer; */ /* || ==> when cursor hover it will change to pointer.*/
+    text-decoration-color: red;
+    text-decoration-style: wavy; 
+    /* text-decoration-style: double;  Two line will come*/
+    /*text-decoration: dotted;*/ /* What happen by this ??????????? */
+}
+p.p2{
+    text-align: left; /* By-default value */
+    font-size: 1.4rem;
+
+    text-indent: 40px; /* indentation of 1st word will happen. */
+ 
+    letter-spacing: 0.1rem; /* spacoing between each letter */
+    line-height: 3.8rem;/* height between each line  */
+}
+p{
+    font-size: 1.5rem;
+}
+
+/* Word-spacing */
+p.p3{
+    word-spacing: 15px;
+}
+p.p4{
+    word-spacing: -2px;
+}
+
+/* text-shadow */
+p.p5{
+    text-shadow: 2px 2px 3px orange; /* 1st value is for how much shadow is far horizontally and 2nd value is for how much shadow is vertically far, third value is for blure value. */
+}
+p.p6{
+    /* color: transparent; */  /* Normal font-color will remoe/erase */
+    text-shadow: 2px 2px 3px orange, 3.5px 3.5px 2.5px greenyellow;
+
+    /* Now, text will be seen as blur  
+    color: transparent;
+    text-shadow: 2px 2px 4px red;
+    */
+}
+p.p7{
+    font-family: 'Courier New', Courier, monospace;  /* By-default family is serif */  
+    /* courier,monospace are not in single quotes b'coz they are web safe fonts that means, they are universally present in all browser. 
+    Above property tells that, first courier new property will apply to font if found, if not found then fall back to courier(which is 2nd value) will apply if this found, if this also not found then lastly monospace will apply. E.g:- written in p.p8 property */
+    /* Web safe fonts are fonts that are universally installed across all browsers and devices. */
+
+    /* See the difference between serif and sans-serif font by writing a-z letters in both font. */
+}
+p.p8{
+    font-family: 'Courier New c', Courierrr, monospace;
+    /* I have written wrong spelling so that 1st 2 font type will not found in browser. so it will apply monospace. */
+}
+
+/* Google fonts will use => fonts.google.com */
+p.p9{
+    font-family: 'Dancing Script', cursive; /* Link in html file. We have selected regular font size 400. we can change it in css.*/
+    /* we can also download this font and attach in this wen bsite folder. This will ensure that it will always execute. Where there, is a chance that link vanish Acc. to me */
+}
+p.p10{
+    font-family: 'Pacifico', cursive; /* Link in css file. */
+    /* font-family: 'pacifico', cursive, Verdana, Geneva, Tahoma, sans-serif;    This extra font name are given by me. for fall back issue if not found. */
+
+    font-style: oblique; /* normal, italic, oblique */
+
+    /* This is the best way among all the options. */
+}
+
+
+
+/* How to use google fonts which i have downloaded in our css ???? */
+@font-face {
+    font-family: mycustomizefontname; /* font name is given by me */
+    src: url(../../Caveat/static/Caveat-Regular.ttf); /* location where my font is present */
+    /* ttf ==> TrueTypeFont file */
+    /* ./  that maens => in this current folder where this(my) file present.  
+       ../ that means => go to the folder where my parent folder present. */
+
+    /* Caveat-Regular.ttf => regular font-size is 400 */
+    /* Bold has 700 weight */
+}
+p.p11{
+    font-family: mycustomizefontname ;
+    
+    font-weight: 700; /* chnaging fongt-weight from regular to bold.  */
+
+    font-size: xx-large; /* 1.2rem */
+
+    /* Youtube Link:- https://www.youtube.com/watch?v=4yiJyHAn9EI  */
+}

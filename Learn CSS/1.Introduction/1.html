@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blockchain Websites</title>
+    <!-- Internal CSS -->
+    <style>
+        body{ /*body is also an element */
+            background-color: antiquewhite; /*This all are named colors, for more reference go to mdn */
+        }
+        h1 {
+            /*selecting h1 tag ===> css comment*/
+            color: aqua; /*text color*/
+            background-color: blueviolet;
+            font-family: cursive;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./CSS/style1.css">
+
+    <!--As u see, that font-family is written in both internal and as well as external file,But changes will choose which are lastly done.as, in this case external css file has done font family change lastly. changes are happen from top to bottom.
+        There is no priority like, internal has less priority. No This is wrong-->
+
+    <!-- Type link and u can see there are much more options like css, favicon, etc... -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-png"> 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> <!--Not Working why ???????????????????????-->
+    <!-- favicon.io ==> we can generate favicon with our images or text by using this website. -->
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    
+    <p style="background-color: lightpink;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cumque.</p>
+    <!--Note:- Inline Css has more priority than internal, external css-->
+    <!--Internal and External css has same priority depends on the ordering/cascading. Those which are written last has high priority-->
+    <!-- It is recommend(by MDN reference) to write css on different file(USe External CSS). Internal and inline Css is for quick styling or testing purpose. -->
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati incidunt alias laborum vel et iusto
+        perferendis fuga pariatur temporibus ipsa voluptate odio odit, labore consectetur ab eligendi tempora
+        repellendus illum?</p>
+    <button> GEt started </button>
+    <!--<input type="submit"> ==> it should be used in form  -->
+    <!--Both are same but button tag has more features.-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cumque.</p>
+    <p style="background-color: lightpink;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cumque.</p>
+
+</body>
+
+</html>

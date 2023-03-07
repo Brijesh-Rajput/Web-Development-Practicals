@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <!-- ig:- vw,vh is related to device width. then use % so that it will be used as % of parent(vw, vh). As done in Glassmorphic signup page -->
+
+    <h3>flex:-  (flexbox)</h3>
+    <ul>
+        <li>flex used to make layouts. (as we have done jugaad for layout like position,float,clear ==> This is not a correct way.)</li>
+        <li>for using flex we need container,parent and children</li>
+        <li>Two types of properties of flex:- <br>
+            <ul>
+                <li>Flex-container:- <br>
+                    <ul>
+                        <li>Properties:-</li>
+                        <li>flex-direction <br>
+                            <ul>
+                                <li>row(bydefault),column,row-reverse(flex-items fills from right),column-reverse(fills from bottom to up)</li>
+                            </ul>
+                        </li>
+
+                        <li>flex-wrap <br>
+                            <ul>
+                                <li>wrap,nowrap,wrapreverse</li>
+                                <li>Its a children property:- gap(or row-gap, column-gap) ==> gap between children.</li>
+                            </ul>
+                        </li>
+                        <li>flex-flow
+                            <ul>
+                                <li>Shorthand property for flex-direction and flex-wrap</li>
+                                <li>flex-wrap: wrap row</li>
+                            </ul>
+                        </li>
+                        <li>justify-content <br>
+                        <ul>
+                            <li>Justify the children along main-axis</li>
+                            <li>Valuess are:- space-between,space-around,space-evenly,flex-satrt(bydefault),flex-end,center</li>
+                            <li>This is different from margin. firstly space between children will reduce when screen size reduce.</li>
+                        </ul>
+                        </li>
+                        <li>align-items <br>
+                            <ul>
+                                <li>Align items used to change the position of children vertically</li>
+                                <li>VAlues are:- center,stretch(bydefault),flex-start,flex-end</li>
+                                <li>If we want to center a div in another div then we will make parent div as flex and justify-content:center and align-items:center</li>
+                            </ul>
+                        </li>
+                        <li>align-content <br>
+                        <ul>
+                            <li>Align-content is uesed to manage the gap between two row of children in flex when screen size reduce.</li>
+                            <li>flex-satrt,space-between,space-evenly are values</li>
+                        </ul></li>
+                    </ul>
+                </li>
+                <li>Flex-children:- (children property)<br>
+                    <ul>
+                        <li>order <br>
+                        <ul>
+                            <li>Default value is 0</li>
+                            <li>Those box whose order value is high will go at last.</li>
+                        </ul>
+                        </li>
+                        <li>flex-grow:- 
+                            <ul>
+                                <li>It's a important property./li>
+                                <li>we are telling a particular child that u should grow differently compare to all child.</li>
+                                <li>Default value is 0</li>
+                            </ul>
+                        </li>
+                        <li>flex-shrink:- 
+                            <ul>
+                                <li>Bydefault 1</li>
+                                <li>shrinking will be more fast as its value increases.</li>
+                                <li>if u want to see it(shrink) then commenting flex-flow:wrap</li>
+                            </ul>
+                        </li>
+                        <li>flex-basis:- 
+                            <ul>
+                                <li>flex basis defines initial width in the direction of main axis for a particular child.</li>
+                                <li>flex-basis:25%</li>
+                                <li>flex-basis sets width b'coz flex-direction value is row.</li>
+                                <li>flex-basis sets hieght b'coz flex-direction value is column.</li>
+                            </ul>
+                        </li>
+                        <li>flex:- 
+                            <ul>
+                                <li>flex is a shorthand property for flex-grow,flex-shrink,flex-basis</li>
+                                <li>flex:0 0 200px; /* 1st value is for flex-grow, 2nd for flex-shrink, 3rd is for flex-basis */</li>
+                            </ul>
+                        </li>
+                        <li>align-self:- 
+                            <ul>
+                                <li>if we want that any children should align by itself on cross-axis then we will use align-self</li>
+                                <li>flex-start,flex-end,center,scretch</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <hr>
+
+    <!-- shortcut-key:- .container>.box{box-$}      {} this is for content. -->
+    <!-- Shortcut:- .container>.box#box-${box-$}*8 -->
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+    </div>
+
+</body>
+</html>

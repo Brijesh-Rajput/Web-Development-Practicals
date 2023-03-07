@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Global variables ==> accessable in every element.  b'coz root element is defined in html*/
+    --primary-text-color:#222;  /* easy to change the value in all places */
+    --secondary-text-color:#444;
+    --card-background-color:#fff;
+    --background-color: #eee;
+    --default-margin-or-padding:30px;
+}
+
+.dark{ 
+    /* We are overriding the variables value(color) for dark theme. */
+    --primary-text-color:#fff; 
+    --secondary-text-color:#eee;
+    --card-background-color:#222;
+    --background-color: #444;
+}
+
+
+.container{
+    /* --my-variable:yellow; */
+    --container-padding-value:40px;
+    padding:var(--container-padding-value);
+    /* overflow: hidden;  @me:- why it is not working when i reduce the screen size ???????????? */
+
+    background-color: var(--background-color);
+
+    min-height: 100vh;
+}
+
+.container h1{
+    text-align: center;
+
+    color: var(--primary-text-color);
+
+    /* background-color: var(--my-variable);   will not work b'coz h1 is not define inside box class. */
+    
+    /* background-color: var(--my-variable,green); */
+     /* we can also define fall-back if not found. as we are doing in font-family. */ 
+
+}
+
+.box{
+    /* variable name starts from --  */
+    
+    /* --my-variable: red;  */
+    /* over-riding the value of red */
+     
+    /* can i put other than colour in my variable ??? Answer:- Yes*/
+
+     /* We can also change the variable properties in javascript. But we can also change it in media-queries also. */
+    
+     padding: var(--default-margin-or-padding);
+    /* background-color: var(--my-variable); */
+    background-color: var(--card-background-color);
+
+    margin-block:var(--default-margin-or-padding);
+
+    border-radius: var(--default-margin-or-padding);
+}
+
+.box h2{
+    margin-bottom: var(--default-margin-or-padding);
+    background-color: var(--my-variable);  /* works b'coz h2 is define inside box and variable is also define in box class. */
+    color: var(--primary-text-color);
+}
+
+p{
+    color:var(--secondary-text-color);
+}
+
+@media screen and (min-width: 800px) {
+    .container{
+        /* --my-variable:pink; */
+    }
+}

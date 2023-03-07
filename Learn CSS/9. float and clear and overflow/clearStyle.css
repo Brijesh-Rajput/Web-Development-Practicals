@@ -1,0 +1,28 @@
+main{
+    border:2px solid green;
+    width:900px;
+    height:500px;
+    /* background-color: aqua; */
+    border-radius: 20px;
+
+    float:left;
+}
+
+.sidebar{
+    border:2px solid red;
+    width:400px;
+    height:300px;
+    /* background-color: chartreuse; */
+    border-radius: 20px;
+
+    /* float: right; */
+}
+
+footer{
+    border: 2px solid blue;
+    width:50px;
+    height:20px;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+}
+

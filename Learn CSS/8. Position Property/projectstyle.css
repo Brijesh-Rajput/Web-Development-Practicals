@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding: 0;
+    /* border:1px solid darkmagenta; */
+}
+
+nav{
+    background-color: blueviolet;
+    width:100vw;
+    height:5vw;
+
+    position:fixed;
+    top:0;
+    z-index:999;
+}
+
+main{
+    border: 2px solid black;
+    margin:5.5vw;
+    padding:20px;
+    width:700px;
+    /* height: 700px; */  /* NOTE:- If u fix the height and if content is not able to fit in that then it will overflow. */
+
+    position: relative;
+    /*top:5vw;*/  /* Don't give top if we want that nav should fixed. b'coz if we do then main content can come out from the container.
+                    If u want to try then uncomment this and give margin=10px; */ 
+    left: 300px;
+}
+
+hr{
+    border-width: 5px;
+}
+
+
+.right-container{
+    /* border: 1px solid green; */
+    width:100vw;
+    height:160vh;
+
+    position: absolute;
+    top: 115px;
+    z-index:10;
+}
+
+.right-aside{
+    background-color: violet;
+    width:20vw;
+    height:73vh;  /* don't write vw in height. as i did mistake, height:40vw;  here height will be given acc. to vw */
+
+    position:sticky; 
+    top:115px;
+    left:85vw;
+
+    /* position: relative;  ==> This is wrong !!!!!!
+    left: 85vw;
+    z-index:10; */
+}
+
+
+
+.contact{
+    background-color: red;
+    width: 81px;
+    height: 81px;
+    border-radius: 49px;
+
+    position: fixed;
+    top: 605px;
+    left: 1360px;
+    z-index: 9999;
+
+    text-align: center;
+}
+
+
+
+footer{
+    background-color: blue;
+    /* margin:20px; */
+    width:100vw;
+    height:10vw;
+}

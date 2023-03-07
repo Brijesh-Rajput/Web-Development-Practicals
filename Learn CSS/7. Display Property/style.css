@@ -1,0 +1,44 @@
+/* Display Property => values are block,inline,inline-block,none  */
+
+*{
+    /* margin:0; */
+    /* padding:0; */
+    box-sizing:border-box;
+    border: 0.2em solid orange;
+}
+
+hr{
+    /* padding:1px; */
+    border: 0.15em solid lightgreen;
+}
+
+.inline{
+    display:inline;
+}
+
+.block{
+    display:block;
+}
+
+.cs{
+    width:50%;
+}
+
+.first{
+    background-color: aqua;
+}
+.second{
+    background-color: blanchedalmond;
+}
+.third{
+    background-color: chartreuse;
+}
+
+ul{
+    /* To hide bullet points of list of ul */
+    list-style-type:none; /*disc,symbols(),square,circle,none */
+    /* How to use symbols() value ?????? */
+
+    /* But then also u will see space, for that we have to do padding=0 */
+    padding:0;
+}

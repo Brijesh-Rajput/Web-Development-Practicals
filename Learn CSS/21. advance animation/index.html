@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-frame Animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div>
+        <p>As we know transition works when we perform some action like hover action. <br>
+            Css allows animation of html elements without using js.
+            u can chanage as many CSS properties as u want,as often as u wish.
+            To use CSS animation,u must first specify some keyframes for the animation. <br>
+            Keyframes hold what styles the element will have at certain times.
+            <br>
+            Properties are:- animation-name, animation-duration, animation-delay, animation-iteration-count,
+            amimation-direction, animation-timing-function, animation-fill-mode.
+        </p>
+
+        <p>
+        <h3>animation-direction:-</h3>
+        It specifies whether an animation should be played forwards,backwards, or in alternate cycles. bydefault value
+        is normal.
+        <br>
+        normal :- animation played as normals(forwards) <br>
+        reverse :- animation played in reverse direction(backwards) <br>
+        alternate :- animation is played forwards first, then backwards <br>
+        alternate-reverse :- animation is played backwards first, then forwards. <br>
+        <br>
+        animation start kaha se karni hai aur end kaha par karni hai. <br>
+        Normal :- animation starts from 0% and goes to 100% <br>
+        Reverse:- animation starts from 100% and goes to 0% <br>
+        </p>
+        <p> <h3>animation-fill-mode:-</h3>
+            It specifies style for target element when animation not playing.(before it starts,after it ends,or both).
+            <br>
+            none:- (default value) Animation will not apply any styles to element before or after it's executing. <br>
+            forwards:- element will retain style values that is <mark> set by the last keyframe</mark>(depends on animation-direction and animation-iteration-count) <mark>How it depends on the animation-iteration-count ?? Answer:- let animation-direction:alternate; and forwards value for animation round odd and even is different.</mark> <br>
+            backwards:- element will get style values that is <mark> set by the first keyframe </mark>(depends on animation-direction) , and retain this during the animation-delay period. <br>
+            both:- animation will follow rules for both forwards and backwards,
+        </p>
+    </div>
+
+    <div class="container1">
+        <div class="box1"></div>
+    </div>
+
+    <div class="container2">
+        <div class="box2"></div>
+    </div>
+
+    <div class="container3">
+        <div class="box3"></div>
+    </div>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <div style="height:30vh"></div>
+</body>
+
+</html>

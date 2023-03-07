@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Display Property</h1>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Pricing</li>
+        </ul>
+    </nav>
+
+    <!--What is the use of span ????-->
+    <h1>Let's Get started</h1> <!--We want to color this text but condition is that color of each word sholuld be different. How to that ?-->
+    <!-- Answer 1:- class is given so that, we can give different color -->
+    <h1 class="inline first">Let's </h1><!--Don't write like this =====================> <h1 class="inline" class="first">Let's </h1> -->
+    <h1 class="inline second">Get </h1>  <!--Ig same think i have to do for id also, if we apply more than one id on any element. -->
+    <h1 class="inline third">Started</h1> 
+    <br>
+    <!-- Answer2:- -->
+    <h1><span class="first">Let's </span><span class="second">Get's </span><span class="third">Started</span></h1>
+
+
+    <p class="inline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, adipisci.</p>
+    <input type="text">
+    <p>Fugiat explicabo eaque nulla natus tenetur exercitationem ea earum consequatur?</p>
+    <!-- NOTE:- 
+        Those element who's display property is block that means they are block elments. 
+        E.g:- p tag is block elements b'coz there bydefault display property is block which is given by user agent called Browser.
+        we can change the display property. that means, we can make p tag as inline element from block element.
+        
+        1. Those who are block elements(display:block), they are starting from new line and covers whole line whether there content uses whole or not.
+        E.g:- Above e.g:- 2nd paragraph tag 
+    -->
+    <hr>
+
+    <p class="inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus necessitatibus iure et
+        molestiae corrupti laborum.</p>
+    <input type="text" class="block">
+    <!-- Now, input tag is block element -->
+    <hr>
+
+    <p class="cs">All headings, paragraphs,divisons,forms,ol,ul,li tags are block elements.</p>
+    <p class="cs">span,images,a,input tags are inline elements. <mark>cnf all this b'coz they can be inline-bock as img tag. </mark></p>
+    <p class="cs">Content flow will be block where originally content flow is form left to right(inline).</p>
+    <span>Lorem ipsum dolor sit amet.</span>
+    <span>Lorem ipsum dolor sit amet consectetur.</span>
+
+    <div>
+        <img src="../images/Vikas_Photo2.JPG" alt="random_photo">
+    </div>
+    <span>
+        <a href="#">Click Me</a>
+    </span>
+
+
+</body>
+
+</html>

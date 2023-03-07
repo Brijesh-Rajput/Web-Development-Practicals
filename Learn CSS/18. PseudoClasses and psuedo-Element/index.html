@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes and Pseudo Element</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h2>Learn application of first-child, last-child, nth-child and ::before,::after in more details. where and how can we use ??</h2>
+    <ul>
+        <li>Pseudo Classes:-
+            <ul>
+                <li>used to define special state of an element.</li>
+                <li>As we can have different states of an element, therefore we can style different-different states of an element.</li>
+                <li>E.g:-
+                    <ul>
+                        <li>:visited, :link</li>
+                        <li>:hover, :active</li>
+                        <li>:first-child</li>
+                        <li>:last-child</li>
+                        <li>:nth-child</li>
+                    </ul>
+                </li>
+                <li>E.g:- link have these all states :- visited,hover,active,link </li>
+                <li>input has focus,hover states</li>
+                <li>button also have hover states</li>
+                <li>Also called as pseudo selectors</li>
+            </ul>
+        </li>
+        <li>Pseudo Elements:-
+            <ul>
+                <li>used to style specific parts of an element.</li>
+                <li>E.g:-
+                    <ul>
+                        <li>::first-letter, ::first-line, ::before, ::after, ::selection(to change the selection)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <br> <br> <hr>
+
+    <main>
+        <h3>This is the main content</h3>
+
+        <form action="">
+            <label for="name" class="required">Name</label>
+            <input type="text" id="name" required>
+        </form>
+
+        <h2 class="required">This is a Good day</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ut minima esse, doloribus quos qui expedita, dolor perspiciatis libero, culpa voluptas! Pariatur sequi aperiam commodi, modi dolorem omnis quo nemo!</p>
+        <a class="primary-btn" href="#">Learn more</a>
+        <h2>Hello</h2>
+        <h2>Hii</h2>
+
+        <!-- ul>li{item-$}*10 -->
+        <ul class="first">
+            <!-- How first-last child work? can we only use in list ?? where we can use this pseeudo element.  -->
+                    <!-- Where we can use first-child, last-child,nth-child pther than in list and How ????????? -->
+            <li>item-1</li> 
+            <li class="important">item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li class="important">item-7</li>
+            <li>item-8</li>
+            <li>item-9</li>
+            <li>item-10</li>
+        </ul>
+
+        <ul>
+            <li>item type 2 - 1</li>
+            <li>item type 2 - 2</li>
+            <li class="important">item type 2 - 3</li>
+            <li>item type 2 - 4</li>
+            <li>item type 2 - 5</li>
+        </ul>
+    </main>
+    <!-- https://www.w3schools.com/css/css_pseudo_classes.asp  => all pseudo classes, learn this overview/brief and then deeply from mdn -->
+
+</body>
+
+</html>

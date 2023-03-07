@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: aqua;
+    text-align: center;
+    width:100vw;
+    height:50px;
+    padding:10px;
+}
+
+nav{
+    width:100vw;
+    /* background-color: chartreuse; */
+    height: 70px;
+}
+
+nav>ul.navul{
+    text-align: end;
+    padding:20px;
+}
+nav>ul>li.navlist{
+    display:inline;
+    padding:50px;
+}
+
+button{
+    width:80px;
+    height:40px;
+    border-radius: 6px;
+    background-color: rgb(133, 133, 248);
+    color: white;
+}
+
+.container{
+    display:flex;
+    flex-direction: row-reverse;
+
+}
+.small-container{
+    margin:120px;
+
+}

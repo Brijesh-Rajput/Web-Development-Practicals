@@ -1,0 +1,29 @@
+.container{
+    background-color: aqua;
+    width:400px;
+    height:600px;
+    /* padding:50px; */
+    margin:50px;
+
+    position:static;
+}
+
+.box{
+    background-color: blanchedalmond;
+    width: 100px;
+    height:100px;
+}
+
+.stickybox{
+    background-color: lime;
+    width:100px;
+    height:100px;
+    border: 1px solid red;
+
+    position: sticky;
+    top:200px;
+    /* left:10px; How it is working ????? */
+    left:200px;  
+
+    /* is Sticky position only for top ????????  Ans:- NO, we can use left also. */
+}

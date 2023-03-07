@@ -1,0 +1,73 @@
+/*
+Universal selector 
+*{
+    /* This below property will apply to all the elments /
+    font-family: fantasy;
+}
+*/
+
+/* Element selector */
+body{ 
+    /*This below property will apply to all the childrens of body element. */
+    font-size: 24px;
+}
+
+/* Id selector
+#first{
+    /* This below property will apply to all the childrens of those element whose id is first. /
+    color:red;
+} 
+*/
+
+/* Grouping selector */
+#first, #second , #list{
+    color:red;
+}
+
+/* Class selector */
+.purple{
+    color:purple;
+    font-family: monospace; /*there will be a space between each letter*/
+    /* NOTE:- * has highest priority. You can see that font-family is given in class and as well as in universal selector also but ony universal selectors will follow. */
+}
+
+.highlight{
+    background-color:yellow;
+    font-weight: bold;
+    font-style: italic;
+}
+/* by making class our code becomes dry(Don't repeat yourself) code. => it enhance efficiency,easy maintaince,less no. of code(no repetition) */
+
+
+/* Nested Selector */
+/*
+p{
+    color:green; /*This will make all paragraph color=green. But we want to do color on paragraph of 1st article. /
+}
+*/
+#first>p{
+    color: green;
+}
+#fourth #nest > p{ /* #fourth #nest > p , ul */
+    background-color:aqua;
+} 
+#fifth{
+    background-color: bisque;
+    color: blueviolet;
+}
+#fifth{
+    color:brown;
+}
+
+/* !important */
+.mycolor{
+    color:blue !important;
+}
+
+/* pseudo Selector ,pseudo-element */
+p:hover{
+    background-color: chartreuse;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+} 
+/* But Hover is happening in 4th article but background doesn't change. why????????????? */
+/* Button:hover ===> Zoom in , Zoom out, seens different  */

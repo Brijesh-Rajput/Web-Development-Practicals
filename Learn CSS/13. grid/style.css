@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    margin:20px;
+    padding: 5px;
+    list-style: disc;
+}
+
+.container{
+    border: 2px solid red; 
+    display:grid;
+    /* bydefault grid works from top-to-bottom  and it contains only one column. */
+
+    /* gap:10px;  for both row and column gap */
+    row-gap: 10px;
+    column-gap: 20px;
+
+    /* grid-template-columns: 100px 200px 300px; */
+    /* grid-template-columns: 10000px 200px 300px; */
+    grid-template-columns: 20vw 200px 300px; /* first column will change according to screen width hwereas other column will take absolute width.*/
+    grid-template-columns: 30% 70%; /* relative */
+
+    /* when we are using fr then it will be always responsive. */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* four columns of same width. full width is divided into four parts. */
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* 2fr+1fr+1fr+1fr=5fr, full width is divided into five parts and 1st column get 2fr */
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+
+    grid-template-columns: repeat(4,1fr); /* to avoid writing fr agin and again. ==> same as grid-template-columns: 1fr 1fr 1fr 1fr */ 
+    grid-template-columns: repeat(4,100px);
+    grid-template-columns: auto auto;
+    grid-template-columns: 200px auto 2fr;
+    grid-template-columns: 200px auto auto; /* or grid-template-columns:200px 1fr 1fr; */ /* ==> borth are same */
+    /* grid-template-columns: repeat(auto-fill,100px); */  /* work like flex behaviour */
+
+    grid-template-rows: 200px 80px;
+    grid-auto-rows: 150px; /* jiske liye height define nahi ki hai usko bydefault ye height mil jaayegi */
+
+    /* justify-content: ; */
+}
+
+.container1{
+    height:600px;
+    display:grid;
+    column-gap: 10px;
+    display:grid;
+    row-gap: 20px;
+    border: 2px solid violet;
+    grid-template-columns: 200px 200px 200px;
+    /*justify-content: center; */ /* default value is start */
+    align-content: center; /*bydefault stretch */
+    /* vertically align contents. This is difference from align-items */
+    align-items: center;
+}
+
+.box{
+    border: 2px solid green;
+    padding: 12px;
+}
+
+#box-1{
+    background-color: aquamarine;
+    /* justify-self: end; */
+     /*bydefault streatch */
+    
+     /* align-self: end;  */
+     /* we can move vertically. this is similar to align-items */
+
+     /* grid-column-start: 1; */
+     /* grid-column-end: 5; */
+     /* grid-column-end: 4; */
+
+     /* shortend:- grid-column: ; */
+     /* grid-column: 1 / 3;  
+     or
+      grid-column: 1 / span 2;  
+      or
+       grid-column:1 / span -1; */
+
+       /* grid-row:1/4; */
+
+    grid-area: 1/1/3/3;
+}
+
+#box-2{
+    background-color: bisque;
+    /* grid-row: 1 / 4 ;  ==> Why it is not working ?????? Ans:- do canges in start and end position. u have write wrong start,end position */
+}
+#box-3{
+    background-color: cadetblue;
+    /* grid-area:2/ 2/ 4/ 4 ;  NOt workingh why ????????????? Ans:- do canges in start and end position. u have write wrong start,end position */
+    /* 1st value means row-start, 2nd defines column-start, 3rd defines row-end, 4th defines column-end. */
+     /*shorthand property of grid-row, grid-column */
+}
+
+
+
+
+
+/* Grid-template-areas */
+.container2{
+    border: 2px solid darkgoldenrod;
+    height: 600px;
+    display:grid;
+    row-gap: 20px;
+    column-gap: 10px;
+
+    grid-template-areas: "header header header header"
+                         "sidebar main main main"
+                         "sidebar main main main"
+                         "sidebar main main main"
+                         "sidebar main main main"
+                         "footer footer footer footer";  /* This is four columns layout */
+}
+
+#box1-1{
+    grid-area: header;
+}
+#box1-2{
+    grid-area: sidebar;
+}
+#box1-3{
+    grid-area: main;
+}
+#box1-4{
+    grid-area:footer;
+}

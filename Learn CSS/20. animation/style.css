@@ -1,0 +1,89 @@
+.box{
+    margin: 100px auto;
+    width:200px;
+    height:200px;
+    background-color: teal;
+
+    transition-duration: 2s; /* defines duration of transition */
+
+    /* transition-property: background-color; */
+    transition-property: border-radius, background-color; /* transition will apply only these property */
+    transition-property: border-radius; /* here, we want to apply transition on border-radius thats why it takes 1second from square toi circle whereas color changes quickly*/
+    /* we specifiy that on which property we want to do transition. */
+    transition-property: all; /*bydefault value is all */
+
+    /* NOTE:- Don't write transition-property value all b'coz less cpu power takes more time as iot goes through all property and checks whether trasnsition have to do or not. write only those property on which we have to do transition. */
+    transition-property: border-radius, backgrpound-color,transform; /* it will be more better in terms of performance. */
+
+    /* transition: 1s; */
+    /*this is shorthand property */
+    /* 1s means 1second */
+
+
+    /* transition-delay: 3s; */ /* here,transition will start after 3seconds when i hovered */
+    /* tells that after how much time transition should start. */
+    transition-delay: 0.1s;
+
+    /*  */
+    transition-timing-function: ease-in; /*bydefault ease */ 
+    /* Values are ease,ease-in,ease-out,ease-in-out,linear,cubic-bezier(n,n,n,n) */
+
+    transition: ;
+}
+
+.box:hover{
+    background-color: blueviolet;
+    border-radius: 50%; /* circle */
+     /* 50% of height and width => ig */
+
+    transform: rotate(180deg);
+}
+
+
+/* transition-function-timing: cubic-bezier(n,n,n,n) */
+.box1{
+    margin: 100px auto;
+    width:200px;
+    height:200px;
+    background-color: teal;
+    transition-duration: 1s;
+    transition-property: transform,background-color;
+    transition-delay:0.1s;
+    transition-timing-function: cubic-bezier(1, -2.05, 0, 4.3) ;
+}
+.box1:hover{
+    background-color: darkblue;
+    transform: scale(1.5);
+}
+
+
+/* Real world Application:- Hover link */
+
+.list{
+    list-style: none;
+    display:flex;
+    gap:20px;
+    padding:8px 16px;
+}
+
+.item{
+    font-size: 2rem;
+    transition: 0.3s ease-in; /* transition-property and delay is not defined. */
+}
+
+.item:hover{
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    transform:translateY(-10px) ;
+    /* Note:- Don't define transition property on hover state b'coz it will work only on hover state and when we leave hover state transition effect will not happen. E.g:- */
+
+    /* transition: all 1s  ease-in  0.1s; */ /* property name | duration | easing function | delay  ==> from mdn reference*/
+    /*transition: background-color,color,cursor 1s ease-in 0.1s;*/  /* Note the difference. here, translate change immediaytely b'coz transition is not applying on that */
+    /* But, why cursor change to pointer immedietly in both the above situation ???? */
+
+
+    /* To swap the line => alt+up or alt+down */
+}
+
+/* And where we can apply transition other than on hover state ??? Give me more application. */

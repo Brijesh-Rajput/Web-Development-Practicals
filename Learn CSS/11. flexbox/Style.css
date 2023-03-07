@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    height:400px;
+    border: 2px solid red;
+
+    display:flex;
+    /*flex-direction: column-reverse;*/  /* By-default row */
+    /* Flex happen acc. to main-axis bydefault but we can change it using flex-direction.  ==> ig, it looks like float*/
+
+    /*flex-wrap: wrap;*/ /*default value:- nowrap */
+    /* wrap-reverse,nowrap,wrap */
+
+    flex-flow: wrap row; /*shorthand property for flex-wrap, flex-direction */
+
+    justify-content: center; /* flex-satrt bydefault ==> all elements will left align*/ 
+     /* values are :- space-around, space-between, space-evenly,flex-start,flex-end,center */
+    /* space between,around children */
+
+    align-items: center;
+
+    /* align-content:flex-start; */
+    /* Values:- flex-start,spac-between,space-evenly, */
+}
+/* 
+
+    =================main-axis  ===> justify-content ============
+
+    ||
+    ||
+    Cross-axis => align-items
+    ||
+    ||
+
+*/
+
+
+
+.box{
+    border:2px solid green;
+    /* margin:10px 0;    tob,bottom=10px   left,right=0 */
+    /* margin:10px 10px; */ /*or margin:10px;  from all direction*/
+    
+    /* margin:10px; */
+    /*gap: 10px;*/  /* row-gap=10px; column-gap:10px; */
+    /*gap between child*/
+
+    /* row-gap: 10px; */
+    /* column-gap:20px; */
+
+    /* flex-basis: 25%;  */
+    /*sets width b'coz flex-direction value is row. */
+    
+    width:100px;
+}
+/* To select a child we also have a pseudo-selector called nth-child */
+
+#box-1{
+    order:1;  /* default-value 0*/
+    flex-grow: 1;
+    flex-shrink: 2; /*default value 1 */  /* box 1 will shrink n=more fast compare to all the children. u can see by uncommenting flex-flow:wrap */
+}
+#box-3{
+    order:2; 
+    /* Usually, we are not doing this. we are doing up-and-down the elements.b'coz screen-reader reads from top to bottom and it doesn't know that order changes in css. that's why are manupulating elements instead of defining order in css. */
+}
+#box-7{
+    /* flex-grow:2; */
+    flex:0 0 200px; /* 1st value is for flex-grow, 2nd for flex-shrink, 3rd is for flex-basis */
+}
+
+#box-5{
+    /* flex-basis: 200px;  */
+    /* box-5 will be of 200px as a initial width*/ 
+    /* flex-shrink: 7; */
+}
+#box-8{
+    align-self: stretch;
+}
+#box-6{
+    align-self: flex-start;
+}
+
+

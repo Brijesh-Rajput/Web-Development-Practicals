@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: aqua;
+
+}
+
+.container{
+    background-color: lightcyan;
+    /* height:400px; */
+    
+    padding:10px;
+
+    position: relative;
+    top: 200px;
+    left:40%;
+
+    border-radius: 14px;
+    width:fit-content;
+
+}
+
+input{
+    width:210px;
+}
+
+#submit-style{
+    background-color: violet;
+    padding:2px;
+    text-align: center;
+    width: 210px;
+}
+
+.small-container{
+    margin:10px;
+}
+
+p{
+    margin:15px;
+    width: 2;
+}
+
+form{
+    /* margin:10px; */
+
+}
+
+/* Understand where we have to give margin and where not to give.... */

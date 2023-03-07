@@ -1,0 +1,147 @@
+/* 
+html{
+    font-size: 2em;
+} 
+*/
+
+main {
+    border: 5px solid brown; /* line style =>dotted, dashed, solid*/
+    /* border-radius: 10px; */
+    width: 50%; /* 50% width of parent of main(which is body) will be given to this main */
+}
+
+#first {
+    border: 5px dashed green;
+    /* width: 50%;       // 50% of main width will be taken by this section element. */
+    width: 100vw; /* 100% of view width will be taken.*/
+    height: 100vh; /* Its an absolute NOT relative to parent.*/
+}
+
+#first>h2{
+    font-size: 10vw; /* changes acc. to screen width size.*/
+    /* We will use media queries instq=ead of that. */
+}
+
+#second{
+    border: 5px solid blueviolet;
+    width:50vw;
+}
+#second_child{
+    border:5px dotted orange;
+    width:50%;
+}
+
+#third{
+    border:5px solid darkslateblue;
+    width:25%;
+}
+#third_child{
+    border:5px dashed lightsalmon;
+    width:50vw;
+}
+
+#fourth{
+    border:5px solid darkgreen;
+    width:50%;
+}
+#fourth_child{
+    border:5px solid lightskyblue;
+    width:200vw; height:200vw;
+}
+
+
+/* Why we don't have to give font-size in px ? */
+h1{
+    font-size: 40px;
+    /* if user increases the font size of browser then also there will be no effect happen on this h1 tag b'coz we have given font-size in px which is absolute.
+    That's why we have to use em in font-size which can change as browser's font size change.
+    Thats why we don't have to use absolute size in font-size. */
+}
+
+main{
+    font-size:2em;
+    /* by doing this, h3 font-size will become ==> h3*font-size-of-parent(which is #first)*font-size-of-parent(which is main)
+        h3=h3*2*2em; => h3=h3*4em; where initiall h3 stores the default em of h3.
+
+        You will see this by doing inspect and selecting h3 tag. 
+        that, h3 inherit from #first 2em, and 2em from main.
+        h3=1.17*2*2;
+        
+        No effect will be seen on h2 tag as its font-size value is in px not in em.
+    */
+}
+
+#first{
+    font-size: 2em; /* font size of all the child of this parent will increase by 2em if they are using em. */
+    /* child are h3,p =>   
+       now, font of h3 will become initiall-font-size-of-h3*parent-font-size;
+       h3=1.17em ==> h3 = h3*2em;
+    */
+}
+
+#second{
+    font-size: 2em;
+    /* No change will be seen in h2 tag of second_child id b'coz :- they have used font-size:2rem in second_child */
+}
+
+#second_child{
+    font-size: 2rem; /* 2*1em = 2em, where 1em is the root font-size*/ 
+    /* NOTE:- Don't give space between 2 & rem */
+
+    /* Now try by uncommenting html/root property and see changes on font-size */
+}
+
+
+/* 
+px -> Css pixel( depends on dpr(density pixel ratio)) 
+      (at the time of screen rendering, Css px is converted into device px uisng dpr)  
+    It also defines absolute. 
+    It will fixed. doesn't change acc. to user's settings.
+
+% -> It's used to define relative height/width to the parent. 
+
+vw,vh ->Absolute width/height
+
+ 
+
+em -> relative unit to the parent. That's why, acc. to user's settings font-size will increase or decrease. 
+    Disadvantages:- it will keep increasing acc. to parent font-size em.
+                    To avoid this disadvantage, we will use rem.
+ 
+rem -> root em
+       relative to the root
+       every html root is html
+       root has 1em font-size
+       root means html
+       by default font-size of root(or html) is 1em
+       E.g:-
+       html{
+        font-size: 2em;
+       }
+       
+       let in any element/id/class property:- font-size=2rem;
+       that means, font-size will be 2*root-font-size => 2*2em => 4em;
+
+h1 -> 32px == 2em
+h2 -> 16px == 1em
+
+p tag => paragraph font-size is 1em == 16px
+*/
+
+
+
+/* Good Practice:- define all font-size firstly and then u will avoid to change it later as possible as.
+E.g:-   
+main{
+    
+}
+h1{
+    fonnt-size:3rem;
+}
+h3{
+    fonnt-size:1.5rem;
+}
+p{
+    fonnt-size:1.5rem;
+}
+*/

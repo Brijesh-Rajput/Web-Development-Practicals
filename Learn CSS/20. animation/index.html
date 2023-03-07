@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation using transition property</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>animation using transition property which applies on transform property.</h2>    
+    <!-- Mainly we are applying transition property between transformation. -->
+
+    <p>It allows us to change property values smoothly, over a given duration.</p>
+    <p>to create transition effect :-two things must</p>
+    <ul>
+        <li>css property u want to add an effect to(after effect which css property will change)</li>
+        <li>duration of effect</li>
+        <li>Note:- if duration not specified then transition will have no effect(b'coz default value is 0 of transition)</li>
+    </ul>
+
+    <p>Property:-
+        <li>transition-delay
+        </li>
+        <li>transition-duration</li>
+        <li>transition-property</li>
+        <li>transition-timing-function:-
+            <ul> Values are :-
+                <li>ease:- (default)  ==> transition effect with slow start,then fast,then end slowly</li>
+                <li>ease-in:- transition effect with slow start</li>
+                <li>ease-out:- transition effect with slow end </li>
+                <li>ease-in-out:- transition effect with slow start and end.</li> <!--Difference between ease-in-out and ease ??-->
+                <li>liner:- transition effect with same speed from start to end</li>
+                <li>cubic-bezier(n,n,n,n):- u defines ur own values</li>
+            </ul>
+        </li>
+    </p>
+
+    <div class="box"></div>
+    <div class="box1"></div>
+
+    <ul class="list">
+        <li class="item">Home</li>
+        <li class="item">Product</li>
+        <li class="item">Profile</li>
+    </ul>
+
+    <footer style="height: 20vh;"></footer>
+
+</body>
+</html>

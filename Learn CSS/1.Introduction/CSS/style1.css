@@ -1,0 +1,7 @@
+p{ /*This property will apply to all p tags.*/
+    /*If we want to apply different css property on different p tags then we will use selectors for that like id, class. 
+    OR we can use inline Css b'coz style is a global attribute. */
+    background-color: #00ff2d;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+}

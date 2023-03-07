@@ -1,0 +1,128 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:40px; 
+}
+
+
+/* Why margin is not working ?? */
+.primary-btn:link{
+    /* margin-top: 100px; Why it is not working ??????/////////////////////////////////////////////////////////////// */
+     color: chartreuse; /*why it is not working ?? ==> it is working in chrome*/
+     background-color: antiquewhite;
+     padding:20px; /*Note:- it will apply to all the state */
+ }
+ 
+ .primary-btn:visited {
+     color: darkgoldenrod;
+     /* background-color: lightpink; */
+ }
+ 
+   
+ .primary-btn:hover { 
+     /*here, we are giving style to the hover state of primary-btn. */ 
+     color:red;
+     background-color: yellow;
+ }
+ 
+ .primary-btn:active{
+     /* when we click on the link then how it will be shown. */
+     color: black;
+     background-color: white;
+     border: 4px solid green;
+ }
+
+/*
+.primary-btn{ /*here, we are styling primary-btn *
+    color:green;
+} /* why it is not working ?? ==> applied when visited*
+*/
+
+
+
+main ul li:first-child{ /* ul ke andar jo li hai uska first child */
+    /* Don't write ul:first child. */
+    /* ul ke andar li vala element hai uska first child */
+    /* background-color: red; */
+}
+main ul li:last-child{
+    /* background-color: violet; */
+}
+
+
+/* By me:- understanding first and last child */
+main h2:first-child{
+    background-color: aquamarine;
+}
+main h2:last-child{
+    background-color: chartreuse;  /* Why this is not working ???????? */
+}
+
+
+/* nth child */
+/* formula :- an+b */
+main ul li:nth-child(4){  /* here b=4 */
+    /* 4th element/li will be selected.  */
+    /* background-color: cornflowerblue; */
+}
+
+main ul li:nth-child(2n){ /* a=2  and n starts from 0 but index is from 1 in css*/
+    /* 2n means i have selected all the even positions */
+    background-color: gray;
+}
+main ul li:nth-child(2n+1){
+    /* a=2, b=1 */
+    background-color: yellow;
+}
+
+
+
+/* Pseudo-Elements */
+h2::first-letter{
+    /* first letter of h2 is selected. */
+    color:lightsalmon;
+    font-size: 3rem;
+}
+
+p::first-line{
+    background-color: coral;
+    /* Note:- apply to first-line of paragraph. This is responsive. */
+}
+
+/* We can also change the selection */
+::selection{
+    /* e.g:- gfg website */
+    /* Change acc. to theme. */
+    color: greenyellow;
+    background-color: black;
+}
+
+
+/* before and after */
+h3::before{
+    content: 'this is not selectable part'; 
+    /* here, we can define the content. Note:- we can't select that part also. */
+    /* This above copntent is not a DOM part that's why we can't select it. u can cnf it by using inspect tools */
+}
+h3::after{
+    /* Real application:- required input field in Google form,
+        Important content*/
+    content: '*' ;
+}
+
+.required::after{
+    content: '*';
+    /* background-color: red; */
+    color: red;
+}
+
+.important::after{
+    content: 'important';
+    background-color: red;
+    color:white;
+    font-size: 0.5rem;
+    padding:0.2rem;
+    margin-left:10px;
+    vertical-align: middle; /* vertically align with parent */
+}
+
+

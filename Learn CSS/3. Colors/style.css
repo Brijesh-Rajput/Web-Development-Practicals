@@ -1,0 +1,31 @@
+body{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:darkcyan;
+    background-color: #7dabba; /*These are named colors. For more reference go to MDN Developer*/
+    /* you can see this by hovering this above color. */
+    /* hsla => huge saturation and lightness alpha
+       rgba => red green blue alpha, alpha tells transparency and opacity of color. Alpha value lies between 0 to 1
+       hwb => 
+
+       rgb , hexcode :-
+       rgb(0,0,0) => Black  ==> #000000 (Hexcode)
+       rgb(255,255,255) => white ==> #ffffff (first 2 f are for red & then again 2 f for green and then again 2 for blue)
+       1hexcode == 4 bit binary 
+       max.m decimal value 255 => 8 bit binary => 2 hexadecimal value  
+
+       webaim.org/resources/contrastchecker/  ==> to check the contrast. 
+       if all the test pass then use it. It will be very easy to read.
+
+       coolors.co ==> website for contrast checker and color choice. 
+       My Suggestion:- Select the color by checking color contrast ranking. High Ranking => good color choice.
+    */
+}
+
+article{
+    background-color: aqua;
+    padding: 24px;
+    margin: 24px;
+    border-radius:8px;
+}
